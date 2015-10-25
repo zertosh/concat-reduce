@@ -1,0 +1,21 @@
+{
+  "name": "concat-reduce",
+  "version": "0.0.0",
+  "description": "concat-reduce",
+  "keywords": [
+    "concat",
+    "stream",
+    "reduce"
+  ],
+  "license": "MIT",
+  "author": "Andres Suarez <zertosh@gmail.com>",
+  "repository": "zertosh/concat-reduce",
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "tap": "^2.2.0"
+  }
+}
