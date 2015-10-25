@@ -1,3 +1,5 @@
+'use strict';
+
 var concatReduce = require('./');
 
 module.exports = function(callback) {
