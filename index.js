@@ -3,6 +3,9 @@
 var stream = require('stream');
 var util = require('util');
 
+module.exports = ConcatReduce;
+util.inherits(ConcatReduce, stream.Transform);
+
 function ConcatReduce(reducer) {
   if (!(this instanceof ConcatReduce)) {
     return new ConcatReduce(reducer)
@@ -15,7 +18,6 @@ function ConcatReduce(reducer) {
   this._reducer = reducer;
   this.once('end', this._destroy);
 }
-util.inherits(ConcatReduce, stream.Transform);
 
 ConcatReduce.prototype._transform = function(buf, enc, cb) {
   this._chunks.push(buf);
@@ -34,5 +36,3 @@ ConcatReduce.prototype._flush = function(cb) {
 ConcatReduce.prototype._destroy = function() {
   this._reducer = this._chunks = null;
 };
-
-module.exports = ConcatReduce;
