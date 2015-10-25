@@ -1,5 +1,7 @@
 # concat-reduce
 
+[![Build Status](https://travis-ci.org/zertosh/concat-reduce.svg?branch=master)](https://travis-ci.org/zertosh/concat-reduce)
+
 Concats a stream, then applies a reducer function to the joined result.
 
 ## Usage
